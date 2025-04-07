@@ -120,7 +120,7 @@ Insert the data into SQLite database.
 """
 
 cities = {
-    "Lviv": {"49.8383", "24.0232"},
+    "Lviv": ("49.8383", "24.0232"),
     "Kyiv": ("50.4333", "30.5167"),
     "Kharkiv": ("50", "36.25"),
     "Odesa": ("46.4775", "30.7326"),
@@ -130,7 +130,7 @@ cities = {
 
 @dag(
     schedule="@daily",
-    start_date=pendulum.datetime(2025, 4, 1, 12, tz="Europe/Kyiv"),
+    start_date=pendulum.datetime(2025, 4, 1, tz="Europe/Kyiv"),
     catchup=True,
     tags=["de-m3-pipeline"],
 )
