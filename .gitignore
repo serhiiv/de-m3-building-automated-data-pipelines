@@ -1,6 +1,8 @@
 # my
 tmp/
 logs/
+airflow/
+*.db
 
 
 # Byte-compiled / optimized / DLL files
